@@ -7,3 +7,43 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
+
+.header {
+  width: 100%;
+}
+
+.accordion__item {
+  cursor: pointer;
+  border-bottom: 1px solid #6b641b;
+}
+
+.accordion__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion__image {
+  display: block;
+  height: 0px;
+  overflow: hidden;
+}
+
+.accordion__item input[type="radio"] {
+  display: none;
+}
+
+.accordion__list:hover {
+  color: #e91a1a;
+}
+
+.accordion__item:hover .accordion__img {
+  height: 300px;
+}
+
+label input[type="radio"]:checked +.accordion__title + .accordion__img {
+  height: 300px;
+}
+
+.accordion__item input[type="radio"]:checked + .accordion__title {
+  color: #e91a1a;
+}
