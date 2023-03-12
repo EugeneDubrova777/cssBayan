@@ -14,7 +14,6 @@ body {
 
 .accordion__item {
   cursor: pointer;
-  border-bottom: 1px solid #6b641b;
 }
 
 .accordion__title {
@@ -24,8 +23,10 @@ body {
 
 .accordion__img {
   display: block;
-  height: 0px;
+  height: 0;
+  margin: 0 auto;
   overflow: hidden;
+  transition: height 1s ease-out;
 }
 
 .icon {
