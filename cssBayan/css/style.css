@@ -1,10 +1,10 @@
 body {
-  background-color: #eacc53;
+  background-color: #565151;
   
 }
 
 .wrapper {
-  max-width: 800px;
+  max-width: 60%;
   margin: 0 auto;
 }
 
@@ -12,16 +12,24 @@ body {
   width: 100%;
 }
 
+h1 {
+  color: #e91a1a;
+}
+
 .accordion__list {
+  color: #f0f8ff;
+  list-style-type: none;
+  padding-left: 0;
   cursor: pointer;
+  transition: 1s;
 }
 
 .accordion__item {
   cursor: pointer;
-  padding: 1em 0;
+  margin: 1em auto;
 }
 
-.accordion__title {
+.accordion__title {  
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -38,8 +46,9 @@ body {
 
 .icon {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 2em;
+  height: 2em;
+  margin-top: 1.2em;
   background: url('../assets/Plus_icon-icons.com_71848.svg') no-repeat;
   cursor: pointer;
   visibility: hidden;
@@ -51,6 +60,7 @@ body {
 
 .accordion__list:hover {
   color: #e91a1a;
+  transition: 1s;
 }
 
 .accordion__list:hover .icon {
@@ -58,11 +68,11 @@ body {
 }
 
 .accordion__item:hover .accordion__img {
-  height: 300px;
+  height: 20em;
 }
 
 label input[type="radio"]:checked +.accordion__title + .accordion__img {
-  height: 300px;
+  height: 20em;
 }
 
 .accordion__item input[type="radio"]:checked + .accordion__title .icon {
@@ -71,4 +81,17 @@ label input[type="radio"]:checked +.accordion__title + .accordion__img {
 
 .accordion__item input[type="radio"]:checked + .accordion__title {
   color: #e91a1a;
+}
+
+
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 668px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    max-width: 330px;
+  }
 }
