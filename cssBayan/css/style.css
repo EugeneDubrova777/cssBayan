@@ -1,0 +1,121 @@
+body {
+  background-color: #565151;
+  
+}
+
+.wrapper {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+}
+
+h1 {
+  font-size: 4em;
+  color: #e91a1a;
+}
+
+.accordion__list {
+  color: #f0f8ff;
+  list-style-type: none;
+  padding-left: 0;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.accordion__item {
+  cursor: pointer;
+  margin: 1em auto;
+}
+
+.accordion__title {  
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 1.2em;
+}
+
+.accordion__img {
+  display: block;
+  height: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  transition: height 1s ease-out;
+}
+
+.icon {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  margin-top: 1.2em;
+  background: url('../assets/Plus_icon-icons.com_71848.svg') no-repeat;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.accordion__item input[type="radio"] {
+  display: none;
+}
+
+.accordion__list:hover {
+  color: #e91a1a;
+  transition: 1s;
+}
+
+.accordion__list:hover .icon {
+  visibility: visible;
+}
+
+.accordion__item:hover .accordion__img {
+  height: 20em;
+}
+
+label input[type="radio"]:checked +.accordion__title + .accordion__img {
+  height: 20em;
+}
+
+.accordion__item input[type="radio"]:checked + .accordion__title .icon {
+  background: url('../assets/4115230-cancel-close-cross-delete_114048.svg') no-repeat;
+}
+
+.accordion__item input[type="radio"]:checked + .accordion__title {
+  color: #e91a1a;
+}
+
+
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 60%;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .text {
+    font-size: 1em;
+  }
+  .accordion__item:hover .accordion__img {
+    height: 15em;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    max-width: 80%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .text {
+    font-size: .8em;
+  }
+  .accordion__item:hover .accordion__img {
+    height: 10em;
+  }
+
+}
