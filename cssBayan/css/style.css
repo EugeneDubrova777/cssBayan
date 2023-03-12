@@ -13,6 +13,7 @@ body {
 }
 
 h1 {
+  font-size: 4em;
   color: #e91a1a;
 }
 
@@ -33,6 +34,10 @@ h1 {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+}
+
+.text {
+  font-size: 1.2em;
 }
 
 .accordion__img {
@@ -86,12 +91,31 @@ label input[type="radio"]:checked +.accordion__title + .accordion__img {
 
 @media (max-width: 1024px) {
   .wrapper {
-    max-width: 668px;
+    max-width: 60%;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .text {
+    font-size: 1em;
+  }
+  .accordion__item:hover .accordion__img {
+    height: 15em;
   }
 }
 
 @media (max-width: 480px) {
   .wrapper {
-    max-width: 330px;
+    max-width: 80%;
   }
+  h1 {
+    font-size: 2em;
+  }
+  .text {
+    font-size: .8em;
+  }
+  .accordion__item:hover .accordion__img {
+    height: 10em;
+  }
+
 }
