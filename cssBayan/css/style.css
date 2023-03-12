@@ -28,6 +28,14 @@ body {
   overflow: hidden;
 }
 
+.icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url('../assets/loon-icon.svg') no-repeat;
+  visibility: hidden;
+}
+
 .accordion__item input[type="radio"] {
   display: none;
 }
@@ -36,12 +44,20 @@ body {
   color: #e91a1a;
 }
 
+.accordion__list:hover .icon {
+  visibility: visible;
+}
+
 .accordion__item:hover .accordion__img {
   height: 300px;
 }
 
 label input[type="radio"]:checked +.accordion__title + .accordion__img {
   height: 300px;
+}
+
+.accordion__item input[type="radio"]:checked + .accordion__title .icon {
+  background: url('../assets/loon-icon1.svg') no-repeat;
 }
 
 .accordion__item input[type="radio"]:checked + .accordion__title {
