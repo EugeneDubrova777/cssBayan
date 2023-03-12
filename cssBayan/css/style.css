@@ -22,7 +22,7 @@ body {
   justify-content: space-between;
 }
 
-.accordion__image {
+.accordion__img {
   display: block;
   height: 0px;
   overflow: hidden;
