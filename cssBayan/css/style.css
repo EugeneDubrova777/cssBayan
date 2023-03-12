@@ -12,11 +12,17 @@ body {
   width: 100%;
 }
 
-.accordion__item {
+.accordion__list {
   cursor: pointer;
 }
 
+.accordion__item {
+  cursor: pointer;
+  padding: 1em 0;
+}
+
 .accordion__title {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
 }
@@ -26,14 +32,16 @@ body {
   height: 0;
   margin: 0 auto;
   overflow: hidden;
+  cursor: pointer;
   transition: height 1s ease-out;
 }
 
 .icon {
   display: inline-block;
-  width: 15px;
-  height: 15px;
-  background: url('../assets/loon-icon.svg') no-repeat;
+  width: 20px;
+  height: 20px;
+  background: url('../assets/Plus_icon-icons.com_71848.svg') no-repeat;
+  cursor: pointer;
   visibility: hidden;
 }
 
@@ -58,7 +66,7 @@ label input[type="radio"]:checked +.accordion__title + .accordion__img {
 }
 
 .accordion__item input[type="radio"]:checked + .accordion__title .icon {
-  background: url('../assets/loon-icon1.svg') no-repeat;
+  background: url('../assets/4115230-cancel-close-cross-delete_114048.svg') no-repeat;
 }
 
 .accordion__item input[type="radio"]:checked + .accordion__title {
